@@ -1,0 +1,217 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  transition: color var(--duration-md) var(--ease);
+}
+
+/* ── Inner bar ── */
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: background-color var(--duration-md) var(--ease),
+    backdrop-filter var(--duration-md) var(--ease),
+    border-color var(--duration-md) var(--ease),
+    box-shadow var(--duration-md) var(--ease),
+    padding var(--duration-md) var(--ease),
+    border-radius var(--duration-md) var(--ease);
+}
+
+/* ── Scrolled pill ── */
+.navScrolled .inner {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+}
+
+.navScrolled {
+  color: #000;
+}
+
+.navScrolled .buttonLink {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.navScrolled .buttonLink:hover {
+  background: transparent;
+  color: #000;
+}
+
+/* ── Always dark text ── */
+.navDark,
+.navLight {
+  color: #000;
+}
+
+.navDark .buttonLink,
+.navLight .buttonLink {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.navDark .buttonLink:hover,
+.navLight .buttonLink:hover {
+  background: transparent;
+  color: #000;
+}
+
+/* ── Elements ── */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: inherit;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: inherit;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  transition: background-color var(--duration-sm) var(--ease),
+    color var(--duration-sm) var(--ease);
+}
+
+.linkActive {
+  background: #000;
+  color: #fff;
+}
+
+.buttonLinkActive {
+  opacity: 0.7;
+}
+
+.buttonLink {
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  transition: background-color var(--duration-sm) var(--ease),
+    color var(--duration-sm) var(--ease),
+    border-color var(--duration-sm) var(--ease);
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburgerLine {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger → X when open */
+.navMenuOpen .hamburgerLine:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.navMenuOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.navMenuOpen .hamburgerLine:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ── Mobile Menu Overlay ── */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 999;
+}
+
+.mobileMenuOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenuInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobileLink {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.mobileLink:hover {
+  opacity: 0.6;
+}
+
+/* ── When menu open, force white text on hamburger ── */
+.navMenuOpen {
+  color: #fff !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

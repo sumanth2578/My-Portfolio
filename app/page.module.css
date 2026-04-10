@@ -1,0 +1,238 @@
+.aboutSection {
+  background-color: var(--dark-bg);
+  color: var(--white);
+  padding: var(--space-xl) 0;
+  position: relative;
+}
+
+.aboutContent {
+  max-width: 800px;
+}
+
+.aboutHeader {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.aboutDescription {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.8;
+  margin-bottom: var(--space-lg);
+}
+
+.readMore {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.readMoreLink {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.bar {
+  opacity: 0.5;
+}
+
+.experience {
+  background-color: var(--dark-bg);
+  color: var(--white);
+  padding: var(--space-xxl) 0;
+  text-align: center;
+}
+
+.experience .boxedHeading {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.education {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: var(--space-xxl) 0;
+  text-align: center;
+}
+
+.skills {
+  background-color: var(--grey-bg);
+  color: var(--black);
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+.boxedHeadingContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.boxedHeading {
+  display: inline-block;
+  border: 4px solid var(--foreground);
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subheadingContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  padding-left: var(--space-md);
+}
+
+.usingNow {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: 0.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subSectionLabel {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 0.4rem 1.2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  opacity: 0.5;
+  margin-bottom: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.subSectionLabel:first-of-type {
+  margin-top: 0;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.webDevGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.webDevCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--duration-md) var(--ease);
+}
+
+.webDevCard:hover {
+  transform: translateY(-6px);
+  opacity: 1;
+}
+
+.webDevImgWrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.webDevImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-md) var(--ease);
+}
+
+.webDevCard:hover .webDevImg {
+  transform: scale(1.04);
+}
+
+.webDevVisit {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity var(--duration-sm) var(--ease),
+    transform var(--duration-sm) var(--ease);
+}
+
+.webDevCard:hover .webDevVisit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.webDevInfo {
+  padding: 0.25rem 0;
+}
+
+.webDevTitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.webDevCategory {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.contact {
+  background-color: var(--background);
+}
+
+.footer {
+  padding: var(--space-lg) 0;
+  background-color: var(--foreground);
+  color: var(--background);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .webDevGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}

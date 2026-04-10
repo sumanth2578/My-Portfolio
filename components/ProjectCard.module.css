@@ -1,0 +1,89 @@
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  position: relative;
+  background-color: var(--background);
+  transition: transform var(--duration-md) var(--ease),
+    box-shadow var(--duration-md) var(--ease);
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform var(--duration-md) var(--ease);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.imagePlaceholder {
+  position: relative;
+  aspect-ratio: 16/9;
+  background-color: #202020;
+  border: 4px solid var(--foreground);
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--duration-md) var(--ease);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.viewBtn {
+  background: var(--background);
+  color: var(--foreground);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform var(--duration-md) var(--ease),
+    opacity var(--duration-md) var(--ease);
+}
+
+.card:hover .viewBtn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.info {
+  padding: var(--space-sm) 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.category {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}

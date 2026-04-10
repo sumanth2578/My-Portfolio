@@ -1,0 +1,111 @@
+.educationContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid var(--foreground);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-lg);
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -2.6rem;
+  top: 0.2rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--foreground);
+  border-radius: 50%;
+  border: 3px solid var(--background);
+}
+
+.timelineContent {
+  margin-top: 0;
+  text-align: left;
+}
+
+.degree {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--foreground);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0.05em;
+}
+
+.institution {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  opacity: 0.8;
+  margin-bottom: var(--space-xs);
+}
+
+.duration {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--foreground);
+  padding: 0.2rem 0.8rem;
+  border: 2px solid var(--foreground);
+  border-radius: 50px;
+  margin-bottom: var(--space-sm);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  color: var(--foreground);
+}
+
+/* Timeline draw-in animation */
+.timeline {
+  background: linear-gradient(var(--foreground), var(--foreground)) no-repeat left top;
+  background-size: 2px 0%;
+  border-left: none;
+  animation: drawTimeline 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+@keyframes drawTimeline {
+  to {
+    background-size: 2px 100%;
+  }
+}
+
+/* Dot pulse on appear */
+.timelineDot {
+  animation: dotAppear 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+@keyframes dotAppear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline {
+    border-left: 2px solid var(--foreground);
+    background: none;
+    animation: none;
+  }
+  .timelineDot {
+    animation: none;
+  }
+}
