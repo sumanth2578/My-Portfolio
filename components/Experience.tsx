@@ -20,7 +20,7 @@ export default function Experience() {
             <h3 className={styles.role}>Full Stack Web Developer</h3>
             <p className={styles.company}>ThreePoint0Labs</p>
           </div>
-          <span className={styles.period}>Aug 2025 – Present</span>
+          <span className={styles.period}>November 2025 – Present</span>
         </div>
 
         <div className={styles.divider} />

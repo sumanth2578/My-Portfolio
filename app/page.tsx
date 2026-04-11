@@ -23,7 +23,7 @@ export default function Home() {
             <div className={styles.aboutContent}>
               <h2 className={styles.aboutHeader}>Meet Sumanth</h2>
               <p className={styles.aboutDescription}>
-                Hello , I am glad that you are here ,  Let me give a quick intro of me <br></br><br></br>
+                Hello , I am glad you are here ,  Let me give a quick intro of me <br></br><br></br>
                 I graduated in Computer Science with one obsession: making AI actually useful in everyday work.
                 That led me to build PM Agent — a tool that turns messy meeting recordings into structured sprint
                 plans — and a voice assistant that lets you manage projects without touching a keyboard. Alongside
