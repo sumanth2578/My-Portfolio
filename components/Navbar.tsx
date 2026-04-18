@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 const NAV_ITEMS = [
@@ -111,7 +112,13 @@ export default function Navbar() {
       <div className="container">
         <div className={styles.inner}>
           <Link href="/" className={styles.logo}>
-            GS
+            <Image
+              src="/WhatsApp Image 2026-04-11 at 11.02.55 AM.jpeg"
+              alt="SG Logo"
+              width={48}
+              height={48}
+              className={styles.logoImg}
+            />
           </Link>
 
           {/* Desktop links */}

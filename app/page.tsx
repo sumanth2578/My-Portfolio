@@ -7,10 +7,13 @@ import Experience from "@/components/Experience";
 import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
 import PortfolioTabs from "@/components/PortfolioTabs";
+import IntroWrapper from "@/components/IntroWrapper";
+import Chatbot from "@/components/Chatbot";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
+    <IntroWrapper>
     <main>
       <Navbar />
 
@@ -121,5 +124,7 @@ export default function Home() {
         </div>
       </footer>
     </main>
+    <Chatbot />
+    </IntroWrapper>
   );
 }
